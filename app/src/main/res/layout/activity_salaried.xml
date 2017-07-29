@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/salary_Layout"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".registration_flow.Register">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:id="@+id/activity_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            >
+            <!--<include-->
+                <!--layout="@layout/activity_busines"/>-->
+
+            <TextView
+                android:id="@+id/tv_Age"
+                android:text=" Age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view3"
+                android:layout_centerHorizontal="true">
+            </TextView>
+            <Spinner
+                android:id="@+id/Age"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:gravity="left"
+                android:layout_below="@+id/tv_Age"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/tv_Designation"
+                android:text=" Designation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view3"
+                android:layout_centerHorizontal="true">
+            </TextView>
+
+            <Spinner
+                android:id="@+id/sp_Designation"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_Designation"
+                android:gravity="left"
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/education_qualifition">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tv_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Home PIN Code"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/phonenumber"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_id"
+                android:text="Two Wheeler Owned"
+                android:textSize="14sp" />
+            <RadioGroup
+                android:id="@+id/radio1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview1"
+                android:layout_toRightOf="@+id/textView1"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Yes" />
+                <RadioButton
+                    android:id="@+id/No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="No" />
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_twoWheeler"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:visibility="invisible">
+            </EditText>
+            <EditText
+                android:id="@+id/et_twoWheeler2"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:maxLength="3"
+                android:inputType="text"
+                android:visibility="invisible">
+            </EditText>
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_id"
+                android:text="Car Owned"
+                android:textSize="14sp" />
+            <RadioGroup
+                android:id="@+id/radio2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview2"
+                android:layout_toRightOf="@+id/textView2"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Yes1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Yes" />
+                <RadioButton
+                    android:id="@+id/No1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="No" />
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_CarOwned"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:visibility="invisible">
+            </EditText>
+            <EditText
+                android:id="@+id/et_CarOwned1"
+                android:text=""
+                android:maxLength="3"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:visibility="invisible">
+            </EditText>
+
+            <TextView
+                android:id="@+id/tv_MainBanker"
+                android:text=" MainBanker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view3"
+                android:layout_centerHorizontal="true">
+            </TextView>
+            <Spinner
+                android:id="@+id/sp_MainBanker1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:gravity="left"
+                android:layout_below="@+id/tv_MainBanker"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_id"
+                android:text="What all transactions do you do online?"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview10"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/textView10">
+
+                <CheckBox
+                    android:id="@+id/Yes2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Shopping" />
+                <CheckBox
+                    android:id="@+id/No4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Travel Booking" />
+                <CheckBox
+                    android:id="@+id/No5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Hotel Booking" />
+                <CheckBox
+                    android:id="@+id/No6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Food Ordering" />
+                <CheckBox
+                    android:id="@+id/No7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Movie Ticketing" />
+                <CheckBox
+                    android:id="@+id/No8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Bill Payement" />
+                <CheckBox
+                    android:id="@+id/No9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Taxi Booking" />
+                <CheckBox
+                    android:id="@+id/No10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Groceries" />
+
+            </LinearLayout>
+            <!--<RadioGroup
+                android:id="@+id/radio3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview10"
+                android:layout_toRightOf="@+id/textView10"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/Yes2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Shopping" />
+                <RadioButton
+                    android:id="@+id/No4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Travel Booking" />
+                <RadioButton
+                    android:id="@+id/No5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Hotel Booking" />
+                <RadioButton
+                    android:id="@+id/No6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Food Ordering" />
+                <RadioButton
+                    android:id="@+id/No7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Movie Ticketing" />
+                <RadioButton
+                    android:id="@+id/No8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Bill Payement" />
+                <RadioButton
+                    android:id="@+id/No9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Taxi Booking" />
+                <RadioButton
+                    android:id="@+id/No10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Groceries" />
+</RadioGroup>-->
+            <!--<RadioGroup-->
+                <!--android:id="@+id/radio3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/textview3"-->
+                <!--android:layout_toRightOf="@+id/textView3"-->
+                <!--android:orientation="vertical"/>-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/Yes2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="20dp"-->
+                <!--android:text="Shopping" />-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/No4"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="20dp"-->
+                <!--android:text="Travel Booking" />-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/No5"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="20dp"-->
+                <!--android:text="Hotel Booking" />-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/No6"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="20dp"-->
+                <!--android:text="Food Ordering" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/No7"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="20dp"-->
+                <!--android:text="Movie Ticketing" />-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/No8"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="20dp"-->
+                <!--android:text="Bill Payement" />-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/No9"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="20dp"-->
+                <!--android:text="Taxi Booking" />-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/No10"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="20dp"-->
+                <!--android:text="Groceries" />-->
+        <!---->
+            <TextView
+                android:id="@+id/textview10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_id"
+                android:text="Which all ecommerce sites do you use?"
+                android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview10"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/textView10">
+
+            <CheckBox
+                android:id="@+id/Ye9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Amazon" />
+            <CheckBox
+                android:id="@+id/No0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Flipkart" />
+            <CheckBox
+                android:id="@+id/Ye10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Yatra" />
+            <CheckBox
+                android:id="@+id/No11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="MakeMyTrip" />
+            <CheckBox
+                android:id="@+id/Ye11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Book My Show" />
+            <CheckBox
+                android:id="@+id/No12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Zomato" />
+            <CheckBox
+                android:id="@+id/Ye24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Swiggy" />
+            <CheckBox
+                android:id="@+id/No25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Paytm" />
+
+            <CheckBox
+                android:id="@+id/Ye25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Ola" />
+            <CheckBox
+                android:id="@+id/No26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Uber" />
+
+            </LinearLayout>
+            <!--<RadioGroup
+                android:id="@+id/radio21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview10"
+                android:layout_toRightOf="@+id/textView10"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/Ye9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Amazon" />
+                <RadioButton
+                    android:id="@+id/No0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Flipkart" />
+                <RadioButton
+                    android:id="@+id/Ye10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Yatra" />
+                <RadioButton
+                    android:id="@+id/No11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="MakeMyTrip" />
+                <RadioButton
+                    android:id="@+id/Ye11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Book My Show" />
+                <RadioButton
+                    android:id="@+id/No12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Zomato" />
+                <RadioButton
+                    android:id="@+id/Ye24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Swiggy" />
+                <RadioButton
+                    android:id="@+id/No25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Paytm" />
+
+                <RadioButton
+                    android:id="@+id/Ye25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Ola" />
+                <RadioButton
+                    android:id="@+id/No26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Uber" />
+            </RadioGroup>-->
+            <!--<RadioGroup-->
+            <!--android:id="@+id/radio22"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/textview10"-->
+            <!--android:layout_toRightOf="@+id/textView10"-->
+            <!--android:orientation="horizontal">-->
+            <!--&lt;!&ndash;<RadioButton&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/Ye10"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="Yatra" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<RadioButton&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/No11"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_gravity="center_horizontal"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:paddingLeft="20dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:paddingRight="20dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="MakeMyTrip" />&ndash;&gt;-->
+
+            <!--</RadioGroup>-->
+            <!--<RadioGroup-->
+            <!--android:id="@+id/radio23"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/textview10"-->
+            <!--android:layout_toRightOf="@+id/textView10"-->
+            <!--android:orientation="horizontal">-->
+            <!--<RadioButton-->
+            <!--android:id="@+id/Ye11"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:text="Book My Show" />-->
+            <!--<RadioButton-->
+            <!--android:id="@+id/No12"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:text="Zomato" />-->
+
+            <!--</RadioGroup>-->
+            <!--<RadioGroup-->
+            <!--android:id="@+id/radio24"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/textview10"-->
+            <!--android:layout_toRightOf="@+id/textView10"-->
+            <!--android:orientation="horizontal">-->
+            <!--<RadioButton-->
+            <!--android:id="@+id/Ye24"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:text="Swiggy" />-->
+            <!--<RadioButton-->
+            <!--android:id="@+id/No25"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:text="Paytm" />-->
+
+            <!--</RadioGroup>-->
+            <!--<RadioGroup-->
+            <!--android:id="@+id/radio25"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/textview10"-->
+            <!--android:layout_toRightOf="@+id/textView10"-->
+            <!--android:orientation="horizontal">-->
+            <!--<RadioButton-->
+            <!--android:id="@+id/Ye25"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:text="Ola" />-->
+            <!--<RadioButton-->
+            <!--android:id="@+id/No26"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:text="Uber" />-->
+
+            <!--</RadioGroup>-->
+            <TextView
+                android:id="@+id/textview25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_id"
+                android:text="Which wallets do you use?"
+                android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview10"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/textView10">
+
+            <CheckBox
+                android:id="@+id/Yes3_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="PayU" />
+
+            <CheckBox
+                android:id="@+id/No3_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="PayTM" />
+
+            <CheckBox
+                android:id="@+id/Yes3_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Mobikwik" />
+
+            <CheckBox
+                android:id="@+id/No3_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Any Other" />
+
+            </LinearLayout>
+
+            <!--<RadioGroup
+                android:id="@+id/radio30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview25"
+                android:layout_toRightOf="@+id/textView25"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/Yes30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="PayU" />
+
+                <RadioButton
+                    android:id="@+id/No30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="PayTM" />
+
+                <RadioButton
+                    android:id="@+id/Yes31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Mobikwik" />
+
+                <RadioButton
+                    android:id="@+id/No31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Any Other" />
+
+            </RadioGroup>-->
+
+            <TextView
+                android:id="@+id/textview11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_id"
+                android:text="Do you use Credit card?"
+                android:textSize="14sp" />
+            <RadioGroup
+                android:id="@+id/creditCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview11"
+                android:layout_toRightOf="@+id/textView11"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/CreditY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Yes" />
+                <RadioButton
+                    android:id="@+id/CreditN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="No" />
+            </RadioGroup>
+            <Spinner
+                android:id="@+id/sp_Credit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:gravity="left"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/textview12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_id"
+                android:text="Do you have Housing Loan?"
+                android:textSize="14sp" />
+            <RadioGroup
+                android:id="@+id/radio27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview12"
+                android:layout_toRightOf="@+id/textView12"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/house1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Yes" />
+                <RadioButton
+                    android:id="@+id/house2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="No" />
+
+            </RadioGroup>
+            <Spinner
+                android:id="@+id/sp_house"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:gravity="left"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/textview13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_id"
+                android:text="Do you have Car Loan?"
+                android:textSize="14sp" />
+            <RadioGroup
+                android:id="@+id/carloan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview13"
+                android:layout_toRightOf="@+id/textView13"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Ye28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Yes" />
+                <RadioButton
+                    android:id="@+id/No29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="No" />
+
+            </RadioGroup>
+            <Spinner
+                android:id="@+id/sp_car"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:gravity="left"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/textview14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_id"
+                android:text="Do you have Health Insurance?"
+                android:textSize="14sp" />
+            <RadioGroup
+                android:id="@+id/healthI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview14"
+                android:layout_toRightOf="@+id/textView14"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Ye29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Yes" />
+                <RadioButton
+                    android:id="@+id/No32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="No" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/textview15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_id"
+                android:text="Do you invest in Mutual Fund?"
+                android:textSize="14sp" />
+            <RadioGroup
+                android:id="@+id/radio32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview15"
+                android:layout_toRightOf="@+id/textView15"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Ye30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Yes" />
+                <RadioButton
+                    android:id="@+id/No33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view4">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ac_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="No of School Going Children"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/ac_homet"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tx_hometution"
+                android:text=" Do they Take Home Tutions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view3"
+                android:layout_centerHorizontal="true">
+            </TextView>
+            <Spinner
+                android:id="@+id/sp_hometution"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:gravity="left"
+                android:layout_below="@+id/tv_Age"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <!--<android.support.design.widget.TextInputLayout
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view5">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ac_homet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Do they Take Home Tutions"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:maxLength="20"
+                    android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>-->
+            <TextView
+                android:id="@+id/textview16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_id"
+                android:text="Have they Bought Online Course Ever?"
+                android:textSize="14sp" />
+            <RadioGroup
+                android:id="@+id/onlineC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview16"
+                android:layout_toRightOf="@+id/textView16"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/Yes36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Yes" />
+                <RadioButton
+                    android:id="@+id/No37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="No" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/textview17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_id"
+                android:text="Which of the following product will you buy in the next 1 year?"
+                android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview10"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/textView10">
+
+            <CheckBox
+                android:id="@+id/Yes37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="2Wheeler" />
+            <CheckBox
+                android:id="@+id/No38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Car" />
+            <CheckBox
+                android:id="@+id/No39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="House" />
+            <CheckBox
+                android:id="@+id/No40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Household Appliance(like TV/Fridge/AC)" />
+
+            </LinearLayout>
+
+            <!--<RadioGroup
+                android:id="@+id/radio37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview17"
+                android:layout_toRightOf="@+id/textView17"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/Yes37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="2Wheeler" />
+                <RadioButton
+                    android:id="@+id/No38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Car" />
+                <RadioButton
+                    android:id="@+id/No39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="House" />
+                <RadioButton
+                    android:id="@+id/No40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Household Appliance(like TV/Fridge/AC)" />
+            </RadioGroup>-->
+
+            <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:id="@+id/view8"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/view7">-->
+
+            <!--<AutoCompleteTextView-->
+            <!--android:id="@+id/pan"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="PAN Card Number"-->
+            <!--android:imeOptions="actionNext"-->
+            <!--android:inputType="textCapCharacters"-->
+            <!--android:maxLength="10"-->
+            <!--android:maxLines="1"-->
+            <!--android:nextFocusDown="@+id/aadhar"-->
+            <!--android:singleLine="true"-->
+            <!--android:textSize="14sp" />-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:id="@+id/view9"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/view8">-->
+
+            <!--<AutoCompleteTextView-->
+            <!--android:id="@+id/aadhar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="AADHAR Card Number"-->
+            <!--android:imeOptions="actionDone"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="12"-->
+            <!--android:maxLines="1"-->
+            <!--android:singleLine="true"-->
+            <!--android:textSize="14sp" />-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+            <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:id="@+id/view10"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/view9">-->
+
+            <!--<AutoCompleteTextView-->
+            <!--android:id="@+id/et_address"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Address"-->
+            <!--android:imeOptions="actionDone"-->
+            <!--android:inputType="text"-->
+            <!--android:maxLines="1"-->
+            <!--android:singleLine="true"-->
+            <!--android:textSize="14sp" />-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+
+            <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:id="@+id/view11"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/view10">-->
+
+            <!--<AutoCompleteTextView-->
+            <!--android:id="@+id/et_pincode"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Pincode"-->
+            <!--android:imeOptions="actionDone"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="6"-->
+            <!--android:maxLines="1"-->
+            <!--android:singleLine="true"-->
+            <!--android:textSize="14sp" />-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_State"-->
+            <!--android:text="State"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/view11"-->
+            <!--android:layout_centerHorizontal="true">-->
+            <!--</TextView>-->
+            <!--<Spinner-->
+
+            <!--android:id="@+id/state_id"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingRight="5dp"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:gravity="left"-->
+            <!--android:layout_below="@+id/tv_State"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true" />-->
+            <!--<TextView-->
+            <!--android:id="@+id/tv_City"-->
+            <!--android:text="City"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/state_id"-->
+            <!--android:layout_centerHorizontal="true">-->
+            <!--</TextView>-->
+            <!--<Spinner-->
+            <!--android:id="@+id/city_id"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingRight="5dp"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:gravity="left"-->
+            <!--android:layout_below="@+id/tv_City"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true" />-->
+            <!--<TextView-->
+            <!--android:id="@+id/textview"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/city_id"-->
+            <!--android:text="Gender:"-->
+            <!--android:textSize="18sp" />-->
+
+            <!--<RadioGroup-->
+            <!--android:id="@+id/radio"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/textview"-->
+            <!--android:layout_toRightOf="@+id/textView"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<RadioButton-->
+            <!--android:id="@+id/male"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:text="Male" />-->
+
+            <!--<RadioButton-->
+            <!--android:id="@+id/female"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:text="Female" />-->
+
+            <!--</RadioGroup>-->
+            <!-- <android.support.design.widget.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/view8"
+                 android:layout_below="@+id/view7">
+                 <AutoCompleteTextView
+                     android:id="@+id/locbuy"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:textSize="14sp"
+                     android:hint="Location"
+                     android:clickable="false"
+                     android:focusable="false"
+                     android:focusableInTouchMode="true" />
+             </android.support.design.widget.TextInputLayout>
+
+             <Spinner
+                 android:id="@+id/location"
+                 android:layout_width="300dp"
+                 android:layout_height="wrap_content"
+                 android:paddingRight="5dp"
+                 android:paddingBottom="5dp"
+                 android:paddingTop="5dp"
+                 android:gravity="left|center"
+                 android:layout_below="@+id/view7"
+                 android:layout_alignParentRight="true"
+                 android:layout_alignParentEnd="true"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentStart="true" /> -->
+
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/uploadimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="Upload Image"
+                    android:textColor="#ff3d00"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/rl1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/relative">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/id_proof"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_menu_camera"-->
+            <!--android:visibility="gone" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/upload"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_toRightOf="@+id/id_proof"-->
+            <!--android:text="Upload your Document"-->
+            <!--android:textColor="#ff3d00"-->
+            <!--android:textSize="14sp"-->
+            <!--android:visibility="gone" />-->
+
+            <!--&lt;!&ndash; <ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/imageView2"-->
+            <!--android:src="@drawable/verified"-->
+            <!--android:layout_below="@+id/location"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignTop="@+id/location"-->
+            <!--android:layout_alignBottom="@+id/location"-->
+            <!--android:visibility="visible"-->
+            <!--/> &ndash;&gt;-->
+            <!--</RelativeLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/id_proof1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_menu_camera"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Upload Bank Details"
+                    android:textColor="#ff3d00"
+                    android:textSize="14sp"
+                    android:visibility="gone">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/checkbox_lin"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <CheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bank"
+                        android:autoLink="web"
+                        android:visibility="gone"
+                        android:text="@string/accept"
+                        android:gravity="center_vertical"
+                        android:linksClickable="true"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/terms_conditions"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:textColor="@color/blue"
+                        android:visibility="gone"
+                        android:layout_weight="2"
+                        android:gravity="center_horizontal"
+                        android:text="Terms and Conditions">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/privacy_policy"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/blue"
+                        android:layout_width="0dp"
+                        android:visibility="gone"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:text="Privacy Policy">
+                    </TextView>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <Button
+                android:id="@+id/btn_E"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#0a0762"
+                android:text="Submit"
+                android:textColor="#fff"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

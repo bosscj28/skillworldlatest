@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_offer"
+            android:icon="@mipmap/ic_nav_home_grey"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_mylead"
+            android:icon="@mipmap/ic_nav_lead_grey"
+            android:title="My Leads" />
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@mipmap/ic_nav_payment_grey"
+            android:title="My Payments" />
+        <item
+            android:id="@+id/nav_customer"
+            android:icon="@mipmap/ic_pref_coaching_grey"
+            android:title="My Customers" />
+        <item
+            android:id="@+id/nav_pritest"
+            android:icon="@mipmap/ic_nav_rate_grey"
+            android:title="Learning" />
+        <item
+            android:id="@+id/nav_pref"
+            android:icon="@mipmap/ic_nav_pref_grey"
+            android:title="My Preferences" />
+
+        <item
+            android:id="@+id/nav_tnc"
+            android:icon="@mipmap/ic_nav_term_grey"
+            android:title="Terms and Condition" />
+
+</group>
+
+    <item android:title="Communicate">
+        <menu>
+            <!--<group android:checkableBehavior="single">-->
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_help"
+                    android:icon="@mipmap/ic_nav_help_grey"
+                    android:title="Help" />
+                <!--<item-->
+                    <!--android:id="@+id/nav_legal"-->
+                    <!--android:icon="@mipmap/ic_nav_legal_grey"-->
+                    <!--android:title="Legal" />-->
+                <item
+                    android:id="@+id/nav_rate"
+                    android:icon="@mipmap/ic_nav_rate_grey"
+                    android:title="Rate Us" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@mipmap/ic_nav_logout_grey"
+                    android:title="Logout" />
+                <!--</group>-->
+            </group>
+        </menu>
+
+    </item>
+
+</menu>

@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".registration_flow.Register">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
+
+                <ImageView
+                    android:id="@+id/arrow_left"
+                    android:src="@drawable/arrow_left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content">
+                    </ImageView>
+
+                <TextView
+                    android:id="@+id/header"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                    android:text="REGISTER"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content">
+                    </TextView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<LinearLayout
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="Please enter the following"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+          android:layout_gravity="center_horizontal"
+          android:id="@+id/profile_image"
+          android:layout_width="120dp"
+          android:layout_height="120dp"
+          android:layout_centerHorizontal="true"
+          android:src="@drawable/profile2"
+          app:civ_border_color="#0a0762" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:focusableInTouchMode="true"
+            android:hint="First Name"
+            android:editable="false"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:maxLength="20"
+            android:enabled="true"
+            android:nextFocusDown="@+id/lastname"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1">
+
+        <AutoCompleteTextView
+            android:id="@+id/lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Last Name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:nextFocusDown="@+id/dob"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2">
+
+        <AutoCompleteTextView
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone"
+            android:hint="Date of Birth"
+            android:inputType="textCapSentences"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:id="@+id/tv_education"
+        android:text="City"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view3"
+        android:layout_centerHorizontal="true">
+    </TextView>
+    <Spinner
+        android:id="@+id/education_qualifition"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone"
+        android:paddingTop="5dp"
+        android:gravity="left"
+        android:layout_below="@+id/tv_education"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/education_qualifition">
+
+        <AutoCompleteTextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Id"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:nextFocusDown="@+id/phonenumber"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view4">
+
+        <AutoCompleteTextView
+            android:id="@+id/phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:hint="10-digit Mobile Number"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:nextFocusDown="@+id/username"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view5">
+
+        <AutoCompleteTextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User Name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:maxLength="20"
+            android:visibility="gone"
+            android:nextFocusDown="@+id/password"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/view7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view6">
+
+        <AutoCompleteTextView
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:visibility="visible"
+            android:maxLines="1"
+            android:nextFocusDown="@+id/pan"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_Category"
+        android:text=" Category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view3"
+        android:layout_centerHorizontal="true">
+    </TextView>
+    <Spinner
+        android:id="@+id/sp_Category"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:gravity="left"
+        />
+    <TextView
+        android:id="@+id/tv_City1"
+        android:text=" City"
+        android:textSize="14sp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/state_id"
+        android:layout_centerHorizontal="true">
+    </TextView>
+    <Spinner
+        android:id="@+id/sp_citi"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_below="@+id/tv_City"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/view9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view8">
+
+        <AutoCompleteTextView
+            android:id="@+id/aadhar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="AADHAR Card Number"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="12"
+            android:visibility="gone"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/view10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view9">
+
+        <AutoCompleteTextView
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:visibility="gone"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/view11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view10">
+
+        <AutoCompleteTextView
+            android:id="@+id/et_pincode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pincode"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="6"
+            android:visibility="gone"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_State"
+        android:text="State"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view11"
+        android:layout_centerHorizontal="true">
+    </TextView>
+    <Spinner
+
+        android:id="@+id/state_id"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:gravity="left"
+        android:visibility="gone"
+        android:layout_below="@+id/tv_State"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/tv_City"
+        android:text="City"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/state_id"
+        android:layout_centerHorizontal="true">
+    </TextView>
+    <Spinner
+        android:id="@+id/city_id"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:visibility="gone"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:gravity="left"
+        android:layout_below="@+id/tv_City"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city_id"
+        android:text="Gender:"
+        android:visibility="gone"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview"
+        android:layout_toRightOf="@+id/textView"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:visibility="gone"
+            android:paddingRight="20dp"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:visibility="gone"
+            android:paddingRight="20dp"
+            android:text="Female" />
+
+    </RadioGroup>
+    <!-- <android.support.design.widget.TextInputLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/view8"
+         android:layout_below="@+id/view7">
+         <AutoCompleteTextView
+             android:id="@+id/locbuy"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="14sp"
+             android:hint="Location"
+             android:clickable="false"
+             android:focusable="false"
+             android:focusableInTouchMode="true" />
+     </android.support.design.widget.TextInputLayout>
+
+     <Spinner
+         android:id="@+id/location"
+         android:layout_width="300dp"
+         android:layout_height="wrap_content"
+         android:paddingRight="5dp"
+         android:paddingBottom="5dp"
+         android:paddingTop="5dp"
+         android:gravity="left|center"
+         android:layout_below="@+id/view7"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentEnd="true"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true" /> -->
+
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/uploadimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="Upload Image"
+            android:textColor="#ff3d00"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative">
+
+        <ImageView
+            android:id="@+id/id_proof"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_camera"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toRightOf="@+id/id_proof"
+            android:text="Upload your Document"
+            android:textColor="#ff3d00"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/imageView2"
+             android:src="@drawable/verified"
+             android:layout_below="@+id/location"
+             android:layout_alignParentRight="true"
+             android:layout_alignTop="@+id/location"
+             android:layout_alignBottom="@+id/location"
+             android:visibility="visible"
+             /> -->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl1"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/id_proof1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_camera"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Upload Bank Details"
+            android:textColor="#ff3d00"
+            android:textSize="14sp"
+            android:visibility="gone">
+
+        </TextView>
+
+
+        <LinearLayout
+            android:id="@+id/checkbox_lin"
+            android:orientation="horizontal"
+            android:layout_height="60dp"
+            android:layout_width="match_parent">
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bank"
+                android:autoLink="web"
+                android:text="@string/accept"
+                android:gravity="center_vertical"
+                android:linksClickable="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/terms_conditions"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+
+                android:textColor="@color/blue"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="Terms and \nConditions">
+            </TextView>
+
+            <TextView
+                android:id="@+id/privacy_policy"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:layout_width="0dp"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+
+                android:text="Privacy Policy">
+            </TextView>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/register"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0a0762"
+        android:text="Save and Continue"
+        android:textColor="#fff"
+        android:textStyle="normal" />
+</LinearLayout>
+</ScrollView>
+
+
+    </LinearLayout>

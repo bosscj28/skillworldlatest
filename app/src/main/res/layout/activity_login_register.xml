@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_login_register"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registration_flow.LoginRegister">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:src="@drawable/new_logo"
+        android:layout_height="240dp"
+        android:layout_width="wrap_content">
+        </ImageView>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:textStyle="normal"
+            android:background="#0a0762"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:text="LOGIN"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:textStyle="normal"
+            android:background="#0a0762"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:text="REGISTER"
+            android:textSize="18sp"/>
+
+        </LinearLayout>
+
+</RelativeLayout>

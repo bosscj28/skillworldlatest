@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#D7CCC8"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/ofer_name"
+                    android:layout_below="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="XYZ"
+                    android:layout_marginLeft="8dp"
+                    style="@style/TextViewKey"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/validate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ofer_name"
+                    android:layout_marginTop="5dp"
+                    android:imeOptions="actionUnspecified"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:layout_marginLeft="8dp"
+                    style="@style/TextViewKey"
+                    android:singleLine="true"
+                    android:text="Valid Till "/>
+
+                <TextView
+                    android:id="@+id/valid_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ofer_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    style="@style/TextViewDetail"
+                    android:layout_toEndOf="@+id/validate"
+                    android:layout_toRightOf="@+id/validate"
+                    android:text="DATE"
+                    />
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:visibility="gone"
+                    android:layout_alignParentTop="true"
+                    android:src="@mipmap/ic_no_image_available" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/validate"
+                    style="@style/TextViewDetail"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:text=" Lorem ipsum dolor sit am laboris nisi ut aliquip ex ea commodo consequat."
+                    />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/description"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="8dp"
+                    style="@style/TextViewKey"
+                    android:text="Location"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/text1"
+                    android:layout_below="@+id/description"
+                    android:layout_toRightOf="@+id/text1"
+                    android:text="Location"
+                    android:visibility="gone"
+                    android:singleLine="true"
+                    android:maxLength="30"
+                    android:ellipsize="end"
+                    style="@style/TextViewDetail"/>
+
+</RelativeLayout>

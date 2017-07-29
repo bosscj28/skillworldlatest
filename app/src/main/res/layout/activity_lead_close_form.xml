@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#50ffffff"
+        tools:context="com.example.jitesh.myapp.com.shanks.myapp.Refer">
+
+
+        <!-- Login progress -->
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+
+        <ScrollView
+            android:id="@+id/leadclosefrom"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/leadclose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="10dp"
+                        android:singleLine="true"
+                        android:text="Lead Close Form"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/bill"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignTop="@+id/leadclosefrom"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:hint="@string/bill"
+                            android:imeOptions="actionNext"
+                            android:nextFocusForward="@+id/purchasedate"
+                            android:inputType="number"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:nextFocusDown="@+id/dealername"
+                            android:singleLine="true"
+                            android:textSize="14sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view1">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/purchasedate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/bill"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:hint="@string/purchasedate"
+                            android:editable="false"
+                            android:nextFocusForward="@+id/dealername"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textSize="14sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view2">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/dealername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/purchasedate"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:hint="@string/dealer_name"
+                            android:imeOptions="actionNext"
+                            android:nextFocusForward="@+id/amount"
+                            android:inputType="textNoSuggestions"
+                            android:nextFocusDown="@+id/amount"
+                            android:textSize="14sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view3">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/dealername"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:hint="@string/amount"
+                            android:imeOptions="actionNext"
+                            android:nextFocusForward="@+id/Contact"
+                            android:inputType="number"
+                            android:nextFocusDown="@+id/Contact"
+                            android:textSize="14sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view4">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/Contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/dealername"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:hint="Dealer Contact Number"
+                            android:imeOptions="actionNext"
+                            android:nextFocusForward="@+id/locbuy"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:nextFocusDown="@+id/locbuy"
+                            android:textSize="14sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/txt5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/view5"
+                        android:layout_below="@+id/view5"
+                        android:layout_marginLeft="19dp"
+                        android:text="Location"
+                        android:visibility="gone" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/view6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt5">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/locbuy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt5"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:hint="Location"
+                            android:imeOptions="actionDone"
+                            android:inputType="textNoSuggestions"
+                            android:textSize="14sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lr"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/view6"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="#ccc"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+                    <!--<Spinner-->
+                    <!--android:id="@+id/location"-->
+                    <!--android:layout_width="300dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_below="@+id/view5"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginLeft="12dp"-->
+                    <!--android:layout_marginRight="12dp"-->
+                    <!--android:gravity="left|center"-->
+                    <!--android:paddingRight="15dp"-->
+                    <!--android:visibility="gone" />-->
+
+
+                    <RelativeLayout
+                        android:id="@+id/bill_relative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lr"
+                        android:layout_marginTop="10dp">
+                        <ImageButton
+                            android:id="@+id/img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@android:color/transparent"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_menu_camera" />
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:hint="Bill Photo Upload"
+                            android:textColor="#000"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentTop="true"
+                        android:padding="10dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+        <Button
+            android:id="@+id/Submit"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="50dp"
+            android:background="#0a0762"
+            android:text="@string/action_submit"
+            android:textColor="#fff"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+</RelativeLayout>

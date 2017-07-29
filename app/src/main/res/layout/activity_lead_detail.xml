@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_lead_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activities.LeadDetail">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="14">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    style="@style/TextViewKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.8"
+                    android:singleLine="true"
+                    android:text="Lead ID "
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_leadID"
+                    style="@style/TextViewDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"
+                    android:text="Plan to buy on"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    style="@style/TextViewKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.8"
+                    android:singleLine="true"
+                    android:text="Buyer Name"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_buyerName"
+                    style="@style/TextViewDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"
+                    android:text="Plan to buy on"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    style="@style/TextViewKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.8"
+                    android:singleLine="true"
+                    android:text="Buyer Phone Number"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:id="@+id/tv_buyerMobileNumber"
+                    style="@style/TextViewDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"
+                    android:text="Plan to buy on"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    style="@style/TextViewKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.8"
+                    android:singleLine="true"
+                    android:text="Buyer Email"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:id="@+id/tv_buyerEmailID"
+                    style="@style/TextViewDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"
+                    android:text="Plan to buy on"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/TextViewKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.8"
+                    android:singleLine="true"
+                    android:text="Dealer Name"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:id="@+id/tv_dealerName"
+                    style="@style/TextViewDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"
+                    android:text="Plan to buy on"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    style="@style/TextViewKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.8"
+                    android:singleLine="true"
+                    android:text="@string/offername"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:id="@+id/tv_offerName"
+                    style="@style/TextViewDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"
+                    android:text="Plan to buy on"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="@android:color/darker_gray" />-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:padding="2dp">-->
+
+            <!--<TextView-->
+            <!--style="@style/TextViewKey"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/lead_detail_text_height"-->
+            <!--android:layout_toRightOf="@+id/text"-->
+            <!--android:layout_weight="0.8"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="Preferred Dealer Name"-->
+            <!--android:textStyle="normal" />-->
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_preferredDealerName"-->
+            <!--style="@style/TextViewDetails"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/lead_detail_text_height"-->
+            <!--android:layout_toRightOf="@+id/text"-->
+            <!--android:layout_weight="0.5"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="Plan to buy on"-->
+            <!--android:textStyle="normal" />-->
+            <!--</LinearLayout>-->
+
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="@android:color/darker_gray"-->
+            <!--android:visibility="gone" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/TextViewKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.8"
+                    android:singleLine="true"
+                    android:text="Dealer Preference"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:id="@+id/tv_prefferedDealerName"
+                    style="@style/TextViewDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"
+                    android:text="Plan to buy on"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:padding="2dp">-->
+
+            <!--<TextView-->
+            <!--style="@style/TextViewKey"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/lead_detail_text_height"-->
+            <!--android:layout_toRightOf="@+id/text"-->
+            <!--android:layout_weight="0.8"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="Bill Number"-->
+            <!--android:textStyle="normal" />-->
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_billNumber"-->
+            <!--style="@style/TextViewDetails"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/lead_detail_text_height"-->
+            <!--android:layout_toRightOf="@+id/text"-->
+            <!--android:layout_weight="0.5"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="Plan to buy on"-->
+            <!--android:textStyle="normal" />-->
+            <!--</LinearLayout>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    style="@style/TextViewKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.8"
+                    android:singleLine="true"
+                    android:text="Plan to buy on "
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:id="@+id/tv_planToBuyOn"
+                    style="@style/TextViewDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"
+                    android:text="Plan to buy on"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:layout_weight="0.12"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    style="@style/TextViewKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.8"
+                    android:singleLine="true"
+                    android:text="Amount Paid"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:id="@+id/tv_amountPaid"
+                    style="@style/TextViewDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"
+                    android:text="Plan to buy on"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    style="@style/TextViewKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.8"
+                    android:singleLine="true"
+                    android:text="Lead Created Date"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:id="@+id/tv_leadcreatedDate"
+                    style="@style/TextViewDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"
+                    android:text="Plan to buy on"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:padding="2dp">-->
+
+            <!--<TextView-->
+            <!--style="@style/TextViewKey"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/lead_detail_text_height"-->
+            <!--android:layout_toRightOf="@+id/text"-->
+            <!--android:layout_weight="0.8"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="Lead Closed Date"-->
+            <!--android:textStyle="normal" />-->
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_leadCloseDate"-->
+            <!--style="@style/TextViewDetails"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/lead_detail_text_height"-->
+            <!--android:layout_toRightOf="@+id/text"-->
+            <!--android:layout_weight="0.5"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="Plan to buy on"-->
+            <!--android:textStyle="normal" />-->
+            <!--</LinearLayout>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_closeLead"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#0a0762"
+        android:text="Close Lead"
+        android:textColor="#fff"
+        android:textStyle="normal" />
+
+</RelativeLayout>
